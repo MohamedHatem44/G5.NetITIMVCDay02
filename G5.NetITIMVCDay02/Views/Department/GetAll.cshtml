@@ -1,0 +1,27 @@
+﻿@model List<Department>
+
+
+
+
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th scope="col">Department Id</th>
+            <th scope="col">Department Name</th>
+            <th scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <th scope="col">@item.Id</th>
+                <th scope="col">@item.Name</th>
+                <th scope="col"><a href="~/Department/ViewDetails/@item.Id" class="btn btn-primary">View Details</a></th>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <a href="~/Department/Create" class="btn btn-success m-3">Add Department</a>
+    </tfoot>
+</table>

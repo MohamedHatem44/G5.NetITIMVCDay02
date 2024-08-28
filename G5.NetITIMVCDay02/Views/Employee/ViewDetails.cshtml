@@ -1,0 +1,20 @@
+﻿@* @{
+    Layout = "_NewLayout";
+} *@
+
+
+
+@{
+    var employee = ViewBag.SingleEmp;
+}
+
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Employee Name: @employee.Name</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Employee Id: @employee.Id</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Employee Age: @employee.Age</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Employee Salary: @employee.Salary</h6>
+        <a href="~/Employee/GetAll" class="btn btn-primary mt-3">Back</a>
+    </div>
+</div>
